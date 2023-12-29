@@ -7,7 +7,7 @@ with open('/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem1/task2/config.yaml',
 
 @pytest.fixture()
 def take_token():
-    response = requests.post(data['url'], data={'username':data['username'], 'password': data['password']})
+    response = requests.post(data['login_url'], data={'username':data['username'], 'password': data['password']})
     return response.json()['token']
 
 @pytest.fixture()

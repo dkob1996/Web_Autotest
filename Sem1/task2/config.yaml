@@ -1,5 +1,5 @@
 
-url: 'https://test-stand.gb.ru/gateway/login'
-url2: 'https://test-stand.gb.ru/api/posts'
+login_url: 'https://test-stand.gb.ru/gateway/login'
+posts_url: 'https://test-stand.gb.ru/api/posts'
 username: '4stud'
 password: 'e442630e84'
