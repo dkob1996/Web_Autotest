@@ -1,0 +1,7 @@
+*.json
+*.html
+*.log
+**/__pycache__/
+**/.pytest_cache
+**/archive
+**.DS_Store

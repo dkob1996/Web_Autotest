@@ -1,5 +1,20 @@
-
+# test urls
 login_url: 'https://test-stand.gb.ru/gateway/login'
 posts_url: 'https://test-stand.gb.ru/api/posts'
+
+# logging path
+log_file: /Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem1/task2/logs_file.log
+
+# auth data
 username: '4stud'
 password: 'e442630e84'
+token: 
+
+# test data
+## test1
+postitve_name: '123'
+
+## test2
+title: test_title
+description: test_description
+content: test_content
