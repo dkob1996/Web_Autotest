@@ -1,7 +1,8 @@
 import logging
 import yaml
+from static_paths import yaml_path
 
-with open('/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem1/task2/config.yaml', 'r') as f:
+with open(yaml_path(), 'r') as f:
     data = yaml.safe_load(f)
 
 # Логгирование
@@ -11,7 +12,7 @@ logging.basicConfig(level=logging.INFO,
                     filemode="a", format= FORMAT, encoding="utf-8")
 
 def log_assert_error(message):
-    logging.error(f"{message}")
+    logging.error(f'{message}')
 
 def log_exception(message):
     logging.exception(f'{message}')

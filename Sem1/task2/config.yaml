@@ -8,13 +8,14 @@ log_file: /Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem1/task2/logs_file.log
 # auth data
 username: '4stud'
 password: 'e442630e84'
-token: 
+#token: 
 
 # test data
 ## test1
-postitve_name: '123'
+postitve_answer: '12345678911234567890123456789012345678901'
 
 ## test2
 title: test_title
 description: test_description
 content: test_content
+description_answer: test_description

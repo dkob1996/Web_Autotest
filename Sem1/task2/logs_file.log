@@ -1,0 +1,13 @@
+2023-12-29 20:45:1703861155 INFO Auth response: <Response [200]>
+2023-12-29 20:45:1703861155 INFO Token: ede0554a580d367c7521d86aa9a1058a
+2023-12-29 20:45:1703861155 INFO   Test: Test 1: Check item in collection. - STARTED
+2023-12-29 20:45:1703861156 INFO   Test: Test 1: Check item in collection. - ENDED
+2023-12-29 20:45:1703861157 INFO Auth response: <Response [200]>
+2023-12-29 20:45:1703861157 INFO Token: ede0554a580d367c7521d86aa9a1058a
+2023-12-29 20:45:1703861157 INFO POST DATA: 
+Title: test_title, 
+Description: test_description, 
+Content: test_content
+2023-12-29 20:45:1703861157 INFO   Test: Test 2: Post item and Check its description. - STARTED
+2023-12-29 20:45:1703861157 INFO Expected result: test_description
+2023-12-29 20:45:1703861157 INFO   Test: Test 2: Post item and Check its description. - ENDED
