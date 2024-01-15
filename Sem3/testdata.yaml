@@ -1,0 +1,14 @@
+address: https://test-stand.gb.ru
+sleep_time: 1
+browser: chrome
+wait: 3
+username: testtest1
+password: c23b2ed66e
+
+
+# errors
+401_error: '401'
+
+
+# test_data
+hello_prefix: 'Hello'
