@@ -19,6 +19,8 @@ def test_step1():
     btn.click()
     x_selector_3 = """//*[@id="app"]/main/div/div/div[2]/h2"""
     err_label = site.find_element('xpath', x_selector_3)
-    assert err_label.text == '401'
-test_step1()
-#button 
+    res = err_label.text
+    site.close()
+    assert res == '401'
+
+
