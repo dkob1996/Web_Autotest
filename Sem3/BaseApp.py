@@ -18,7 +18,11 @@ class BasePage:
 
     def get_element_property(self, mode, path, property):
         element = self.find_element(mode, path)
-        return(element.value_of_css_property(property))
+        return (element.value_of_css_property(property))
     
     def go_to_site(self):
         self.driver.get(self.address)
+
+    def get_current_url(self):
+        url = self.driver.current_url
+        return url

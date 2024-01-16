@@ -1,7 +1,9 @@
 address: https://test-stand.gb.ru
+lk_address: https://test-stand.gb.ru/
+profile_address: https://test-stand.gb.ru/user/profile
 sleep_time: 1
 browser: chrome
-wait: 3
+wait: 10
 username: testtest1
 password: c23b2ed66e
 
@@ -12,3 +14,6 @@ password: c23b2ed66e
 
 # test_data
 hello_prefix: 'Hello'
+test_title: 'test_title'
+test_description: 'test_description'
+test_content: 'test_content'

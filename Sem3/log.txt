@@ -1,8 +1,10 @@
-2024-01-16 01:05:09 INFO ====== WebDriver manager ======
-2024-01-16 01:05:10 INFO Get LATEST chromedriver version for google-chrome
-2024-01-16 01:05:10 INFO Get LATEST chromedriver version for google-chrome
-2024-01-16 01:05:10 INFO Driver [/Users/dmitrii_kobozev/.wdm/drivers/chromedriver/mac64/120.0.6099.109/chromedriver-mac-arm64/chromedriver] found in cache
-2024-01-16 01:05:14 INFO 401
-2024-01-16 01:05:14 INFO abc
-2024-01-16 01:05:16 INFO Hello, testtest1
-2024-01-16 01:05:16 INFO abc
+2024-01-16 22:43:33 INFO ====== WebDriver manager ======
+2024-01-16 22:43:34 INFO Get LATEST chromedriver version for google-chrome
+2024-01-16 22:43:34 INFO Get LATEST chromedriver version for google-chrome
+2024-01-16 22:43:34 INFO Driver [/Users/dmitrii_kobozev/.wdm/drivers/chromedriver/mac64/120.0.6099.109/chromedriver-mac-arm64/chromedriver] found in cache
+2024-01-16 22:43:38 INFO 401
+2024-01-16 22:43:38 INFO abc
+2024-01-16 22:43:40 INFO Hello, testtest1
+2024-01-16 22:43:40 INFO abc
+2024-01-16 22:43:43 INFO test_title
+2024-01-16 22:43:43 INFO abc

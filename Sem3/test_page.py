@@ -31,6 +31,8 @@ class TestSearchLocator:
 
     POST_SAVE_RESULT_FIELD = (By.XPATH, """//*[@id="app"]/main/div/div[1]/h1""")
 
+    POST_TITLE_RESULT_FIELD = (By.XPATH, """ //*[@id="app"]/main/div/div/div[1]/div/div[3]/div[2]/div[1]/table/tbody/tr[1]/td[2]""")
+
 class OperationsHelper(BasePage):
     def enter_text(self, locator, word):
         field = self.find_element(locator)
@@ -52,6 +54,9 @@ class OperationsHelper(BasePage):
     def click_button(self, locator):
         field = self.find_element(locator)
         field.click()
+
+    def get_current_url(self):
+        return super().get_current_url()
 
     def enter_login(self, word):
         self.enter_text(TestSearchLocator.LOGIN_FIELD, word)
@@ -86,6 +91,9 @@ class OperationsHelper(BasePage):
 
     def get_new_post_info(self):
         return self.get_text(TestSearchLocator.POST_SAVE_RESULT_FIELD)
+    
+    def get_new_post_title(self):
+        return self.get_text(TestSearchLocator.POST_TITLE_RESULT_FIELD)
     
 
     
