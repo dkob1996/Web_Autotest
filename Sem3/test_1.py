@@ -20,3 +20,4 @@ def test_step2(browser):
     page.enter_password(passwd)
     page.click_login_button()
     assert page.get_auth_text() == f'{testdata["hello_prefix"]}, {testdata["username"]}'
+
