@@ -19,7 +19,7 @@ class TestSearchLocator:
 
     HELLO_USERNAME_SEPECTOR = (By.XPATH, """//*[@id="app"]/main/nav/ul/li[3]/a""")
 
-    NEW_POST_BUTTON = (By.XPATH, """//*[@id="create-btn"]""")
+    NEW_POST_BUTTON = (By.XPATH, """//*[@id="create-btn"]""")   
 
     POST_TITLE_FIELD = (By.XPATH, """//*[@id="create-item"]/div/div/div[1]/div/label/input""")
 
@@ -32,6 +32,19 @@ class TestSearchLocator:
     POST_SAVE_RESULT_FIELD = (By.XPATH, """//*[@id="app"]/main/div/div[1]/h1""")
 
     POST_TITLE_RESULT_FIELD = (By.XPATH, """ //*[@id="app"]/main/div/div/div[1]/div/div[3]/div[2]/div[1]/table/tbody/tr[1]/td[2]""")
+
+    CONTACT_HEADER_BUTTON = (By.XPATH, """ //*[@id="app"]/main/nav/ul/li[2]/a""")
+    
+    CONTACT_FORM_TITLE_FIELD = (By.XPATH, """ //*[@id="app"]/main/div/div/h1""")
+    
+    CONTACT_NAME_FIELD = (By.XPATH, """ //*[@id="contact"]/div[1]/label/input""")
+
+    CONTACT_EMAIL_FIELD = (By.XPATH, """ //*[@id="contact"]/div[2]/label/input""")
+
+    CONTACT_CONTENT_FIELD = (By.XPATH, """ //*[@id="contact"]/div[3]/label/span/textarea""")
+
+    CONTACT_US_BUTTON = (By.XPATH, """ //*[@id="contact"]/div[4]/button""")
+
 
 class OperationsHelper(BasePage):
     def enter_text(self, locator, word):
@@ -55,8 +68,7 @@ class OperationsHelper(BasePage):
         field = self.find_element(locator)
         field.click()
 
-    def get_current_url(self):
-        return super().get_current_url()
+
 
     def enter_login(self, word):
         self.enter_text(TestSearchLocator.LOGIN_FIELD, word)
@@ -94,6 +106,26 @@ class OperationsHelper(BasePage):
     
     def get_new_post_title(self):
         return self.get_text(TestSearchLocator.POST_TITLE_RESULT_FIELD)
+    
+    def click_contact_header_button(self):
+        self.click_button(TestSearchLocator.CONTACT_HEADER_BUTTON)
+
+    def get_contact_form_title(self):
+        return self.get_text(TestSearchLocator.CONTACT_FORM_TITLE_FIELD)
+    
+    def enter_contact_name(self, word):
+        self.enter_text(TestSearchLocator.CONTACT_NAME_FIELD, word)
+
+    def enter_contact_email(self, word):
+        self.enter_text(TestSearchLocator.CONTACT_EMAIL_FIELD, word)
+
+    def enter_contact_content(self, word):
+        self.enter_text(TestSearchLocator.CONTACT_CONTENT_FIELD, word)
+
+    def click_contact_us_button(self):
+        self.click_button(TestSearchLocator.CONTACT_US_BUTTON)
+
+    
     
 
     

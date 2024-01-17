@@ -24,5 +24,13 @@ class BasePage:
         self.driver.get(self.address)
 
     def get_current_url(self):
-        url = self.driver.current_url
-        return url
+        return (self.driver.current_url)
+    
+    def swith_to_alert(self):
+        return (self.driver.switch_to.alert)
+    
+    def get_text_from_alert(self):
+        return (self.swith_to_alert().text)
+    
+    def accept_the_alert(self):
+        self.swith_to_alert().accept

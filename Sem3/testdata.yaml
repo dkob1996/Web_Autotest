@@ -1,5 +1,5 @@
 address: https://test-stand.gb.ru
-lk_address: https://test-stand.gb.ru/
+lk_address: https://test-stand.gb.ru
 profile_address: https://test-stand.gb.ru/user/profile
 sleep_time: 1
 browser: chrome
@@ -17,3 +17,15 @@ hello_prefix: 'Hello'
 test_title: 'test_title'
 test_description: 'test_description'
 test_content: 'test_content'
+
+# contact_us_test_data
+contact_us_url: https://test-stand.gb.ru/contact
+test_contact_name: 'test_name'
+test_contact_valid_email: 'test@gmail.con'
+test_contact_invalid_email: 'test'
+test_contact_content: 'test_content'
+test_contact_valid_answer: 'Form successfully submitted'
+contact_form_title: 'Contact us!'
+
+contact_us_email_validation_text_part_1: 'Адрес электронной почты должен содержать символ"@". В адресе "'
+contact_us_email_validation_text_part_2: '" отсутсвует символ "@".'
