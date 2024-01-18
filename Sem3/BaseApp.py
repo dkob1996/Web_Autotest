@@ -5,6 +5,7 @@ with open("./testdata.yaml") as f:
     wait = testdata["wait"]
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import logging
 
 class BasePage:
     def __init__(self, address, driver):
@@ -12,16 +13,28 @@ class BasePage:
         self.driver = driver
     
     def find_element(self, locator):
-        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(locator),
-                                               message=f"Can't find element by locator {locator}")
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(locator),
+                                                message=f"Can't find element by locator {locator}")
+        except:
+            logging.exception('Error: element not found')
+            element = None
         return element
 
     def get_element_property(self, mode, path, property):
         element = self.find_element(mode, path)
-        return (element.value_of_css_property(property))
+        if element is None:
+            return None
+        else:
+            return (element.value_of_css_property(property))
     
     def go_to_site(self):
-        self.driver.get(self.address)
+        try:
+            self.driver.get(self.address)
+        except:
+            logging.exception('Error: go to site False')
+            return False
+        return True
 
     def get_current_url(self):
         url = self.driver.current_url
