@@ -1,6 +1,7 @@
 import yaml
 from test_page import OperationsHelper
 import time
+# pytest --html=report.html; python3 mail.py
 
 with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)

@@ -1,0 +1,25 @@
+    
+Xpath:   
+    LOGIN_FIELD: //*[@id="login"]/div[1]/label/input
+    PASS_FIELD: //*[@id="login"]/div[2]/label/input
+    ERROR_FIELD: //*[@id="app"]/main/div/div/div[2]/h2
+    HELLO_USERNAME_SEPECTOR: //*[@id="app"]/main/nav/ul/li[3]/a
+    NEW_POST_BUTTON: //*[@id="create-btn"]
+    POST_TITLE_FIELD: //*[@id="create-item"]/div/div/div[1]/div/label/input
+    POST_DESCRIPTION_FIELD: //*[@id="create-item"]/div/div/div[2]/div/label/span/textarea
+    POST_CONTENT_FIELD: //*[@id="create-item"]/div/div/div[3]/div/label/span/textarea
+    POST_SAVE_BUTTON_PATH: //*[@id="create-item"]/div/div/div[7]/div/button/span
+    POST_SAVE_RESULT_FIELD: //*[@id="app"]/main/div/div[1]/h1
+    POST_TITLE_RESULT_FIELD: //*[@id="app"]/main/div/div/div[1]/div/div[3]/div[2]/div[1]/table/tbody/tr[1]/td[2]
+
+    CONTACT_HEADER_BUTTON: //*[@id="app"]/main/nav/ul/li[2]/a
+    CONTACT_FORM_TITLE_FIELD: //*[@id="app"]/main/div/div/h1
+    CONTACT_NAME_FIELD: //*[@id="contact"]/div[1]/label/input
+    CONTACT_EMAIL_FIELD: //*[@id="contact"]/div[2]/label/input
+    CONTACT_CONTENT_FIELD: //*[@id="contact"]/div[3]/label/span/textarea
+    CONTACT_US_BUTTON: //*[@id="contact"]/div[4]/button
+
+
+
+CSS_SELECTOR:
+    LOGIN_BUTTON_FIELD: button
