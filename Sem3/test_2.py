@@ -32,19 +32,9 @@ def test_step2(browser):
     page.click_contact_header_button()
     time.sleep(3)
     assert page.get_contact_form_title() == testdata['contact_form_title']
-'''
-## sign contact form with INVALID email
-def test_step3(browser):
-    page = OperationsHelper(address=testdata['contact_us_url'], driver= browser)
-    page.enter_contact_name(test_contact_name)
-    page.enter_contact_email(test_contact_invalid_email)
-    page.enter_contact_content(test_contact_content)
-    page.click_contact_us_button()
-    page.swith_to_alert()
-    assert page.get_text_from_alert() == f'{testdata["contact_us_email_validation_text_part_1"]}{test_contact_invalid_email}{testdata["contact_us_email_validation_text_part_2"]}'
-'''
+
 ## sign contact form with VALID email
-def test_step4(browser):
+def test_step3(browser):
     page = OperationsHelper(address=testdata['contact_us_url'], driver= browser)
     page.enter_contact_name(test_contact_name)
     page.enter_contact_email(test_contact_valid_email)
