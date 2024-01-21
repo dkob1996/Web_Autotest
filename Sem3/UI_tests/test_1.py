@@ -1,26 +1,26 @@
 import yaml
-from test_page import OperationsHelper
+from UI_functions.test_page import OperationsHelper
 
 # Test commands:
 ## Run pytest with sending results to email
-### pytest --html=report.html; python3 mail.py
+### pytest --html=report.html; python3 Mailer/mail.py
 ## Start current test
 ## pytest test_1.py -vv
 
 # Import test data
-with open("./testdata.yaml") as f:
+with open("./yaml_files_UI_tests/testdata.yaml") as f:
     testdata = yaml.safe_load(f)
-    ## Auth data
-    name = testdata["username"]
-    passwd = testdata["password"]
-    ## Valid data
-    valid_user_name = testdata["hello_prefix"]
-    ## Invalid data
-    invalid_login_data = testdata["invalid_login_data"]
-    ## Errors data
-    error_401 = testdata['401_error']
-    ## Setting-up data
-    site_address = testdata['address']
+## Auth data
+name = testdata["username"]
+passwd = testdata["password"]
+## Valid data
+valid_user_name = testdata["hello_prefix"]
+## Invalid data
+invalid_login_data = testdata["invalid_login_data"]
+## Errors data
+error_401 = testdata['401_error']
+## Setting-up data
+site_address = testdata['address']
 
 
 ## Step 1: Login with invalid data

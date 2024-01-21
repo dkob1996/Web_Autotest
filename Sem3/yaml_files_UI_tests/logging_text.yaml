@@ -1,0 +1,13 @@
+# Main errors
+element_not_found: 'Error: element not found'
+
+# BasePage - Text
+go_to_the_site_error: 'Error: go to site False'
+cant_find_element_by_locator: Can't find element by locator
+
+# OperationsHelper - Text
+send_text_to_element: 'Send text to element'
+get_text_from_element: 'Get text from element'
+click_to_element: 'Click to element'
+cannot_click_to_element: 'Cannot click to element'
+

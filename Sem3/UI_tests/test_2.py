@@ -1,28 +1,28 @@
 import yaml
 import time
-from test_page import OperationsHelper
+from UI_functions.test_page import OperationsHelper
 
 # Test commands:
 ## Run pytest with sending results to email
-### pytest --html=report.html; python3 mail.py
+### pytest --html=report.html; python3 Mailer/mail.py
 ## Start current test
 ## pytest test_2.py -vv
 
 # Import test data
-with open("./testdata.yaml") as f:
+with open("./yaml_files_UI_tests/testdata.yaml") as f:
     testdata = yaml.safe_load(f)
-    ## Auth data
-    name = testdata["username"]
-    passwd = testdata["password"]
-    ## Create Post data
-    test_title = testdata["test_title"]
-    test_description = testdata["test_description"]
-    test_content = testdata["test_content"]
-    ## Valid data
-    valid_user_name = testdata["hello_prefix"]
-    ## Setting-up data
-    sleep_time = testdata["sleep_time"]
-    site_address = testdata['address']
+## Auth data
+name = testdata["username"]
+passwd = testdata["password"]
+## Create Post data
+test_title = testdata["test_title"]
+test_description = testdata["test_description"]
+test_content = testdata["test_content"]
+## Valid data
+valid_user_name = testdata["hello_prefix"]
+## Setting-up data
+sleep_time = testdata["sleep_time"]
+site_address = testdata['address']
 
 
 ## Step 1: Login with VALID data

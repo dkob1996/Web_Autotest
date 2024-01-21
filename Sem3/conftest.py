@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 # Import setting-up data
-with open("./testdata.yaml") as f:
+with open("./yaml_files_UI_tests/testdata.yaml") as f:
    testdata = yaml.safe_load(f)
    browser_name = testdata["browser"]
    sleep_time = testdata["sleep_time"]

@@ -1,32 +1,32 @@
 import yaml
 import time
-from test_page import OperationsHelper
+from UI_functions.test_page import OperationsHelper
 
 # Test commands:
 ## Run pytest with sending results to email
-### pytest --html=report.html; python3 mail.py
+### pytest --html=report.html; python3 Mailer/mail.py
 ## Start current test
 ## pytest test_3.py -vv
 
 # Import test data
-with open("./testdata.yaml") as f:
+with open("./yaml_files_UI_tests/testdata.yaml") as f:
     testdata = yaml.safe_load(f)
-    ## Auth data
-    name = testdata["username"]
-    passwd = testdata["password"]
-    ## Contact us page data
-    test_contact_name = testdata["test_contact_name"]
-    test_contact_valid_email = testdata["test_contact_valid_email"]
-    test_contact_content = testdata["test_contact_content"]
-    test_contact_valid_answer = testdata["test_contact_valid_answer"]
-    ## Valid data
-    valid_user_name = testdata["hello_prefix"]
-    contact_us_page_title = testdata['contact_form_title']
-    contact_us_answer_valid = testdata["test_contact_valid_answer"]
-    ## Setting-up data
-    sleep_time = testdata["sleep_time"]
-    site_address = testdata['address']
-    contact_us_address = testdata['contact_us_url']
+## Auth data
+name = testdata["username"]
+passwd = testdata["password"]
+## Contact us page data
+test_contact_name = testdata["test_contact_name"]
+test_contact_valid_email = testdata["test_contact_valid_email"]
+test_contact_content = testdata["test_contact_content"]
+test_contact_valid_answer = testdata["test_contact_valid_answer"]
+## Valid data
+valid_user_name = testdata["hello_prefix"]
+contact_us_page_title = testdata['contact_form_title']
+contact_us_answer_valid = testdata["test_contact_valid_answer"]
+## Setting-up data
+sleep_time = testdata["sleep_time"]
+site_address = testdata['address']
+contact_us_address = testdata['contact_us_url']
 
 
 ## Step 1: Login with VALID data

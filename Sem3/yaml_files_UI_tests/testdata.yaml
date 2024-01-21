@@ -7,10 +7,10 @@ contact_us_url: https://test-stand.gb.ru/contact
 # Setting-up data
 browser: chrome   # chrome/firefox
 sleep_time: 3
-wait: 10
+wait: 5
 
 
-# errors
+# Errors with codes
 401_error: '401'
 500_error: '500'
 

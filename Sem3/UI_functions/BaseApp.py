@@ -1,12 +1,21 @@
 import yaml
-import logging
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from Logger.Logging_function.logging_UI_func import *
 
 # Import setting-up data
-with open("./testdata.yaml") as f:
-    testdata = yaml.safe_load(f)
+with open("./yaml_files_UI_tests/testdata.yaml") as f1, open("./yaml_files_UI_tests/logging_text.yaml") as f2:
+    testdata = yaml.safe_load(f1)
+    logging_txt = yaml.safe_load(f2)
+    # Setting-up data
     wait = testdata["wait"]
+
+    # Logging errors
+    element_not_found = logging_txt["element_not_found"]
+    go_to_the_site_error = logging_txt["go_to_the_site_error"]
+    # Error Text
+    cant_find_element_by_locator = logging_txt["cant_find_element_by_locator"]
+
 
 class BasePage:
     def __init__(self, address, driver):
@@ -17,9 +26,9 @@ class BasePage:
     def find_element(self, locator):
         try:
             element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
-                                                message=f"Can't find element by locator {locator}")
+                                                message=f"{cant_find_element_by_locator} {locator}")
         except:
-            logging.exception('Error: element not found')
+            log_exception(element_not_found, '')
             element = None
         return element
 
@@ -36,7 +45,7 @@ class BasePage:
         try:
             self.driver.get(self.address)
         except:
-            logging.exception('Error: go to site False')
+            log_exception(go_to_the_site_error, '')
             return False
         return True
 

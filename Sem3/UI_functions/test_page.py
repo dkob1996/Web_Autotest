@@ -1,31 +1,41 @@
 import yaml
 import logging
 from selenium.webdriver.common.by import By
-from BaseApp import BasePage
+from Logger.Logging_function.logging_UI_func import *
+from UI_functions.BaseApp import BasePage
 
 class TestSearchLocator:
-    # Parse locators from yaml file to dictionary
-    with open("./locators.yaml") as f:
-        locators = yaml.safe_load(f)
+    # Parse data from yaml files
+    with open("./yaml_files_UI_tests/locators.yaml") as f1, open("./yaml_files_UI_tests/logging_text.yaml") as f2:
+    ## Parse locators from yaml file to dictionary
+        locators = yaml.safe_load(f1)
+        logging_txt = yaml.safe_load(f2)
     ids = dict()
     for locator in locators['Xpath'].keys():
         ids[locator] = (By.XPATH, locators['Xpath'][locator])
     for locator in locators['CSS_SELECTOR'].keys():
         ids[locator] = (By.CSS_SELECTOR, locators['CSS_SELECTOR'][locator])
+    ## Parse logging text from yaml
+    send_text_to_element = logging_txt["send_text_to_element"]
+    element_not_found = logging_txt["element_not_found"]
+    get_text_from_element = logging_txt["get_text_from_element"]
+    click_to_element = logging_txt["click_to_element"]
+    cannot_click_to_element = logging_txt["cannot_click_to_element"]
+    
 
 class OperationsHelper(BasePage):
     # Func which enter text into fields with curtain locator
     def enter_text(self, locator, word, description=None):
         if description:
-            logging.debug(f'Send text to element {description}')
+            log_debug(TestSearchLocator.send_text_to_element, description)
         else:
-            logging.debug(f'Send text to element {locator}')
+            log_debug(TestSearchLocator.send_text_to_element, locator)
         field = self.find_element(locator)
         if field is None:
             if description:
-                logging.error(f'Element {description} not found')
+                log_error(TestSearchLocator.element_not_found, description)
             else:
-                logging.error(f'Element {locator} not found')
+                log_error(TestSearchLocator.element_not_found, locator)
         else:
             field.clear()
             field.send_keys(word)
@@ -33,35 +43,35 @@ class OperationsHelper(BasePage):
     # Func which get text from fields with curtain locator
     def get_text(self, locator, description=None):
         if description:
-            logging.debug(f'Get text from element {description}')
+            log_debug(TestSearchLocator.get_text_from_element, description)
         else:
-            logging.debug(f'Get text from element {locator}')        
+            log_debug(TestSearchLocator.get_text_from_element, locator)     
         try:
             field = self.find_element(locator)
             text = field.text
         except:
             text = None
             if description:
-                logging.error(f'Element {description} not found')
+                log_error(TestSearchLocator.element_not_found, description)
             else:
-                logging.error(f'Element {locator} not found')
+                log_error(TestSearchLocator.element_not_found, locator)
         return text
 
     # Func which does click to button with curtain locator
     def click_button(self, locator, description=None):
         if description:
-            logging.debug(f'Click to element {description}')
+            log_debug(TestSearchLocator.click_to_element, description)
         else:
-            logging.debug(f'Click to element {locator}')
+            log_debug(TestSearchLocator.click_to_element, locator)
         field = self.find_element(locator)
         if field:
             try:
                 field.click()
             except:
                 if description:
-                    logging.exception(f'Cannot click to element {description}')
+                    log_exception(TestSearchLocator.cannot_click_to_element, description)
                 else:
-                    logging.exception(f'Cannot click to element {locator}')       
+                    log_exception(TestSearchLocator.cannot_click_to_element, locator)     
             
 
     # Functions which use main functions and transfer to them curtain locators
