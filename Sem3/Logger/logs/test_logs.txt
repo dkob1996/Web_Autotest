@@ -1,0 +1,495 @@
+2024-01-21 19:47:51 DEBUG Starting new HTTPS connection (1): test-stand.gb.ru:443
+2024-01-21 19:47:52 DEBUG https://test-stand.gb.ru:443 "POST /gateway/login HTTP/1.1" 200 233
+2024-01-21 19:47:52 INFO Auth response: <Response [200]>
+2024-01-21 19:47:52 INFO Token:ede0554a580d367c7521d86aa9a1058a
+2024-01-21 19:47:52 INFO Step 1: Check item in collection. - STARTED
+2024-01-21 19:47:52 DEBUG Starting new HTTPS connection (1): test-stand.gb.ru:443
+2024-01-21 19:47:53 DEBUG https://test-stand.gb.ru:443 "GET /api/posts?owner=notMe HTTP/1.1" 200 1147
+2024-01-21 19:47:53 INFO Step 1: Check item in collection. - ENDED
+2024-01-21 19:47:53 DEBUG Starting new HTTPS connection (1): test-stand.gb.ru:443
+2024-01-21 19:47:54 DEBUG https://test-stand.gb.ru:443 "POST /gateway/login HTTP/1.1" 200 233
+2024-01-21 19:47:54 INFO Auth response: <Response [200]>
+2024-01-21 19:47:54 INFO Token:ede0554a580d367c7521d86aa9a1058a
+2024-01-21 19:47:54 DEBUG Starting new HTTPS connection (1): test-stand.gb.ru:443
+2024-01-21 19:47:55 DEBUG https://test-stand.gb.ru:443 "POST /api/posts HTTP/1.1" 200 272
+2024-01-21 19:47:55 INFO POST DATA: \nTitle: test_title, \nDescription: test_description, \nContent: test_content
+2024-01-21 19:47:55 INFO Step 2: Post item and Check its description. - STARTED
+2024-01-21 19:47:55 INFO Expected result: Step 2: Post item and Check its description.
+2024-01-21 19:47:55 INFO Step 2: Post item and Check its description. - ENDED
+2024-01-21 19:47:55 INFO ====== WebDriver manager ======
+2024-01-21 19:47:55 INFO Get LATEST chromedriver version for google-chrome
+2024-01-21 19:47:55 DEBUG Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-01-21 19:47:55 DEBUG https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 3798
+2024-01-21 19:47:55 INFO Get LATEST chromedriver version for google-chrome
+2024-01-21 19:47:55 DEBUG Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-01-21 19:47:55 DEBUG https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 3798
+2024-01-21 19:47:55 INFO Driver [/Users/dmitrii_kobozev/.wdm/drivers/chromedriver/mac64/120.0.6099.109/chromedriver-mac-arm64/chromedriver] found in cache
+2024-01-21 19:47:55 DEBUG Started executable: `/Users/dmitrii_kobozev/.wdm/drivers/chromedriver/mac64/120.0.6099.109/chromedriver-mac-arm64/chromedriver` in a child process with pid: 42598 using 0 to output -3
+2024-01-21 19:47:56 DEBUG POST http://localhost:63591/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+2024-01-21 19:47:56 DEBUG Starting new HTTP connection (1): localhost:63591
+2024-01-21 19:47:57 DEBUG http://localhost:63591 "POST /session HTTP/1.1" 200 0
+2024-01-21 19:47:57 DEBUG Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"120.0.6099.234","chrome":{"chromedriverVersion":"120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483})","userDataDir":"/var/folders/gc/dr29jjv10p15zqvfchd_c_vh0000gn/T/.org.chromium.Chromium.z2Bkyo"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63596"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"427bbf6241740edc0967362db8999121"}} | headers=HTTPHeaderDict({'Content-Length': '892', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:57 DEBUG Finished Request
+2024-01-21 19:47:57 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/timeouts {"implicit": 3000}
+2024-01-21 19:47:57 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/timeouts HTTP/1.1" 200 0
+2024-01-21 19:47:57 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:57 DEBUG Finished Request
+2024-01-21 19:47:57 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/url {"url": "https://test-stand.gb.ru"}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/url HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_2"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/clear {}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/clear HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/value {"text": "test", "value": ["t", "e", "s", "t"]}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/value HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_3"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/clear {}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/clear HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/value {"text": "test", "value": ["t", "e", "s", "t"]}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/value HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG Click to element: ('css selector', 'button')
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "css selector", "value": "button"}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_9"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_9/click {}
+2024-01-21 19:47:58 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_9/click HTTP/1.1" 200 0
+2024-01-21 19:47:58 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:58 DEBUG Finished Request
+2024-01-21 19:47:58 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/div/div/div[2]/h2')
+2024-01-21 19:47:58 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/div/div/div[2]/h2"}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_11"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_11/text {}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_11/text HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":"401"} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_2"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/clear {}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/clear HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/value {"text": "testtest1", "value": ["t", "e", "s", "t", "t", "e", "s", "t", "1"]}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_2/value HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_3"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/clear {}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/clear HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/value {"text": "c23b2ed66e", "value": ["c", "2", "3", "b", "2", "e", "d", "6", "6", "e"]}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_3/value HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG Click to element: ('css selector', 'button')
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "css selector", "value": "button"}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9873553D80BB5ED75D3F53264C234A7E_element_9"}} | headers=HTTPHeaderDict({'Content-Length': '94', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_9/click {}
+2024-01-21 19:47:59 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/9873553D80BB5ED75D3F53264C234A7E_element_9/click HTTP/1.1" 200 0
+2024-01-21 19:47:59 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:47:59 DEBUG Finished Request
+2024-01-21 19:47:59 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/nav/ul/li[3]/a')
+2024-01-21 19:47:59 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/nav/ul/li[3]/a"}
+2024-01-21 19:48:01 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:01 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"0B429C9A63C1D99C3F006A293295AA3B_element_13"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:01 DEBUG Finished Request
+2024-01-21 19:48:01 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/0B429C9A63C1D99C3F006A293295AA3B_element_13/text {}
+2024-01-21 19:48:01 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/0B429C9A63C1D99C3F006A293295AA3B_element_13/text HTTP/1.1" 200 0
+2024-01-21 19:48:01 DEBUG Remote response: status=200 | data={"value":"Hello, testtest1"} | headers=HTTPHeaderDict({'Content-Length': '28', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:01 DEBUG Finished Request
+2024-01-21 19:48:01 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/url {"url": "https://test-stand.gb.ru"}
+2024-01-21 19:48:01 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/url HTTP/1.1" 200 0
+2024-01-21 19:48:01 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:01 DEBUG Finished Request
+2024-01-21 19:48:01 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:48:01 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:48:04 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:04 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[1]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:04 DEBUG Finished Request
+2024-01-21 19:48:05 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:48:08 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:08 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[1]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:08 DEBUG Finished Request
+2024-01-21 19:48:08 ERROR Error: element not found: 
+Traceback (most recent call last):
+  File "/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem3/UI_functions/BaseApp.py", line 29, in find_element
+    element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//*[@id="login"]/div[1]/label/input')
+Stacktrace:
+0   chromedriver                        0x000000010088c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000100884664 chromedriver + 4130404
+2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824
+3   chromedriver                        0x0000000100522040 chromedriver + 581696
+4   chromedriver                        0x0000000100561ab0 chromedriver + 842416
+5   chromedriver                        0x00000001005156bc chromedriver + 530108
+6   chromedriver                        0x0000000100516930 chromedriver + 534832
+7   chromedriver                        0x0000000100851e08 chromedriver + 3923464
+8   chromedriver                        0x00000001008563dc chromedriver + 3941340
+9   chromedriver                        0x000000010083a038 chromedriver + 3825720
+10  chromedriver                        0x0000000100856f3c chromedriver + 3944252
+11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100
+12  chromedriver                        0x0000000100873980 chromedriver + 4061568
+13  chromedriver                        0x0000000100873af8 chromedriver + 4061944
+14  chromedriver                        0x00000001008842e4 chromedriver + 4129508
+15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8
+
+2024-01-21 19:48:08 ERROR Error: element not found: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:48:08 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:48:08 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:48:11 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:11 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[2]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:11 DEBUG Finished Request
+2024-01-21 19:48:12 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:48:15 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:15 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[2]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:15 DEBUG Finished Request
+2024-01-21 19:48:15 ERROR Error: element not found: 
+Traceback (most recent call last):
+  File "/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem3/UI_functions/BaseApp.py", line 29, in find_element
+    element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//*[@id="login"]/div[2]/label/input')
+Stacktrace:
+0   chromedriver                        0x000000010088c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000100884664 chromedriver + 4130404
+2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824
+3   chromedriver                        0x0000000100522040 chromedriver + 581696
+4   chromedriver                        0x0000000100561ab0 chromedriver + 842416
+5   chromedriver                        0x00000001005156bc chromedriver + 530108
+6   chromedriver                        0x0000000100516930 chromedriver + 534832
+7   chromedriver                        0x0000000100851e08 chromedriver + 3923464
+8   chromedriver                        0x00000001008563dc chromedriver + 3941340
+9   chromedriver                        0x000000010083a038 chromedriver + 3825720
+10  chromedriver                        0x0000000100856f3c chromedriver + 3944252
+11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100
+12  chromedriver                        0x0000000100873980 chromedriver + 4061568
+13  chromedriver                        0x0000000100873af8 chromedriver + 4061944
+14  chromedriver                        0x00000001008842e4 chromedriver + 4129508
+15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8
+
+2024-01-21 19:48:15 ERROR Error: element not found: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:48:15 DEBUG Click to element: ('css selector', 'button')
+2024-01-21 19:48:15 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "css selector", "value": "button"}
+2024-01-21 19:48:15 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:15 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"77E4FCEE2A1A802A723CC6DD50C67A2C_element_44"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:15 DEBUG Finished Request
+2024-01-21 19:48:15 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/77E4FCEE2A1A802A723CC6DD50C67A2C_element_44/click {}
+2024-01-21 19:48:16 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/77E4FCEE2A1A802A723CC6DD50C67A2C_element_44/click HTTP/1.1" 200 0
+2024-01-21 19:48:16 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:16 DEBUG Finished Request
+2024-01-21 19:48:16 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/nav/ul/li[3]/a')
+2024-01-21 19:48:16 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/nav/ul/li[3]/a"}
+2024-01-21 19:48:16 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:16 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8F2E50946DAEA35F46886972F88DA2D9_element_53"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:16 DEBUG Finished Request
+2024-01-21 19:48:16 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_53/text {}
+2024-01-21 19:48:16 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_53/text HTTP/1.1" 200 0
+2024-01-21 19:48:16 DEBUG Remote response: status=200 | data={"value":"Hello, testtest1"} | headers=HTTPHeaderDict({'Content-Length': '28', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:16 DEBUG Finished Request
+2024-01-21 19:48:16 DEBUG Click to element: ('xpath', '//*[@id="create-btn"]')
+2024-01-21 19:48:16 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-btn\"]"}
+2024-01-21 19:48:19 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:19 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"create-btn\"]\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1611', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:19 DEBUG Finished Request
+2024-01-21 19:48:19 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-btn\"]"}
+2024-01-21 19:48:22 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:22 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"create-btn\"]\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1611', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:22 DEBUG Finished Request
+2024-01-21 19:48:23 ERROR Error: element not found: 
+Traceback (most recent call last):
+  File "/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem3/UI_functions/BaseApp.py", line 29, in find_element
+    element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//*[@id="create-btn"]')
+Stacktrace:
+0   chromedriver                        0x000000010088c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000100884664 chromedriver + 4130404
+2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824
+3   chromedriver                        0x0000000100522040 chromedriver + 581696
+4   chromedriver                        0x0000000100561ab0 chromedriver + 842416
+5   chromedriver                        0x00000001005156bc chromedriver + 530108
+6   chromedriver                        0x0000000100516930 chromedriver + 534832
+7   chromedriver                        0x0000000100851e08 chromedriver + 3923464
+8   chromedriver                        0x00000001008563dc chromedriver + 3941340
+9   chromedriver                        0x000000010083a038 chromedriver + 3825720
+10  chromedriver                        0x0000000100856f3c chromedriver + 3944252
+11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100
+12  chromedriver                        0x0000000100873980 chromedriver + 4061568
+13  chromedriver                        0x0000000100873af8 chromedriver + 4061944
+14  chromedriver                        0x00000001008842e4 chromedriver + 4129508
+15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8
+
+2024-01-21 19:48:23 DEBUG Send text to element: ('xpath', '//*[@id="create-item"]/div/div/div[1]/div/label/input')
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-item\"]/div/div/div[1]/div/label/input"}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8F2E50946DAEA35F46886972F88DA2D9_element_46"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_46/clear {}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_46/clear HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_46/value {"text": "test_title", "value": ["t", "e", "s", "t", "_", "t", "i", "t", "l", "e"]}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_46/value HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG Send text to element: ('xpath', '//*[@id="create-item"]/div/div/div[2]/div/label/span/textarea')
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-item\"]/div/div/div[2]/div/label/span/textarea"}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8F2E50946DAEA35F46886972F88DA2D9_element_47"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_47/clear {}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_47/clear HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_47/value {"text": "test_description", "value": ["t", "e", "s", "t", "_", "d", "e", "s", "c", "r", "i", "p", "t", "i", "o", "n"]}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_47/value HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG Send text to element: ('xpath', '//*[@id="create-item"]/div/div/div[3]/div/label/span/textarea')
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-item\"]/div/div/div[3]/div/label/span/textarea"}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8F2E50946DAEA35F46886972F88DA2D9_element_48"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_48/clear {}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_48/clear HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_48/value {"text": "test_content", "value": ["t", "e", "s", "t", "_", "c", "o", "n", "t", "e", "n", "t"]}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_48/value HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG Click to element: ('xpath', '//*[@id="create-item"]/div/div/div[7]/div/button/span')
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"create-item\"]/div/div/div[7]/div/button/span"}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8F2E50946DAEA35F46886972F88DA2D9_element_60"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:23 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_60/click {}
+2024-01-21 19:48:23 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/8F2E50946DAEA35F46886972F88DA2D9_element_60/click HTTP/1.1" 200 0
+2024-01-21 19:48:23 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:23 DEBUG Finished Request
+2024-01-21 19:48:26 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/div/div[1]/h1')
+2024-01-21 19:48:26 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/div/div[1]/h1"}
+2024-01-21 19:48:26 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:26 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"135A0BF62E9372CA41E4A2A6712D1861_element_69"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:26 DEBUG Finished Request
+2024-01-21 19:48:26 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/135A0BF62E9372CA41E4A2A6712D1861_element_69/text {}
+2024-01-21 19:48:26 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/135A0BF62E9372CA41E4A2A6712D1861_element_69/text HTTP/1.1" 200 0
+2024-01-21 19:48:26 DEBUG Remote response: status=200 | data={"value":"test_title"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:26 DEBUG Finished Request
+2024-01-21 19:48:26 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/url {"url": "https://test-stand.gb.ru"}
+2024-01-21 19:48:27 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/url HTTP/1.1" 200 0
+2024-01-21 19:48:27 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:27 DEBUG Finished Request
+2024-01-21 19:48:27 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:48:27 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:48:30 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:30 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[1]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:30 DEBUG Finished Request
+2024-01-21 19:48:30 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[1]/label/input"}
+2024-01-21 19:48:33 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:33 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[1]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:33 DEBUG Finished Request
+2024-01-21 19:48:34 ERROR Error: element not found: 
+Traceback (most recent call last):
+  File "/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem3/UI_functions/BaseApp.py", line 29, in find_element
+    element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//*[@id="login"]/div[1]/label/input')
+Stacktrace:
+0   chromedriver                        0x000000010088c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000100884664 chromedriver + 4130404
+2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824
+3   chromedriver                        0x0000000100522040 chromedriver + 581696
+4   chromedriver                        0x0000000100561ab0 chromedriver + 842416
+5   chromedriver                        0x00000001005156bc chromedriver + 530108
+6   chromedriver                        0x0000000100516930 chromedriver + 534832
+7   chromedriver                        0x0000000100851e08 chromedriver + 3923464
+8   chromedriver                        0x00000001008563dc chromedriver + 3941340
+9   chromedriver                        0x000000010083a038 chromedriver + 3825720
+10  chromedriver                        0x0000000100856f3c chromedriver + 3944252
+11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100
+12  chromedriver                        0x0000000100873980 chromedriver + 4061568
+13  chromedriver                        0x0000000100873af8 chromedriver + 4061944
+14  chromedriver                        0x00000001008842e4 chromedriver + 4129508
+15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8
+
+2024-01-21 19:48:34 ERROR Error: element not found: ('xpath', '//*[@id="login"]/div[1]/label/input')
+2024-01-21 19:48:34 DEBUG Send text to element: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:48:34 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:48:37 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:37 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[2]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:37 DEBUG Finished Request
+2024-01-21 19:48:37 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"login\"]/div[2]/label/input"}
+2024-01-21 19:48:40 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 404 0
+2024-01-21 19:48:40 DEBUG Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"login\"]/div[2]/label/input\"}\n  (Session info: chrome=120.0.6099.234)","stacktrace":"0   chromedriver                        0x000000010088c4dc chromedriver + 4162780\n1   chromedriver                        0x0000000100884664 chromedriver + 4130404\n2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824\n3   chromedriver                        0x0000000100522040 chromedriver + 581696\n4   chromedriver                        0x0000000100561ab0 chromedriver + 842416\n5   chromedriver                        0x00000001005156bc chromedriver + 530108\n6   chromedriver                        0x0000000100516930 chromedriver + 534832\n7   chromedriver                        0x0000000100851e08 chromedriver + 3923464\n8   chromedriver                        0x00000001008563dc chromedriver + 3941340\n9   chromedriver                        0x000000010083a038 chromedriver + 3825720\n10  chromedriver                        0x0000000100856f3c chromedriver + 3944252\n11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100\n12  chromedriver                        0x0000000100873980 chromedriver + 4061568\n13  chromedriver                        0x0000000100873af8 chromedriver + 4061944\n14  chromedriver                        0x00000001008842e4 chromedriver + 4129508\n15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136\n16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8\n"}} | headers=HTTPHeaderDict({'Content-Length': '1625', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:40 DEBUG Finished Request
+2024-01-21 19:48:41 ERROR Error: element not found: 
+Traceback (most recent call last):
+  File "/Users/dmitrii_kobozev/Desktop/Web_Autotests/Sem3/UI_functions/BaseApp.py", line 29, in find_element
+    element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//*[@id="login"]/div[2]/label/input')
+Stacktrace:
+0   chromedriver                        0x000000010088c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000100884664 chromedriver + 4130404
+2   chromedriver                        0x00000001004dbbc0 chromedriver + 293824
+3   chromedriver                        0x0000000100522040 chromedriver + 581696
+4   chromedriver                        0x0000000100561ab0 chromedriver + 842416
+5   chromedriver                        0x00000001005156bc chromedriver + 530108
+6   chromedriver                        0x0000000100516930 chromedriver + 534832
+7   chromedriver                        0x0000000100851e08 chromedriver + 3923464
+8   chromedriver                        0x00000001008563dc chromedriver + 3941340
+9   chromedriver                        0x000000010083a038 chromedriver + 3825720
+10  chromedriver                        0x0000000100856f3c chromedriver + 3944252
+11  chromedriver                        0x000000010082c6f4 chromedriver + 3770100
+12  chromedriver                        0x0000000100873980 chromedriver + 4061568
+13  chromedriver                        0x0000000100873af8 chromedriver + 4061944
+14  chromedriver                        0x00000001008842e4 chromedriver + 4129508
+15  libsystem_pthread.dylib             0x0000000182546034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000182540e3c thread_start + 8
+
+2024-01-21 19:48:41 ERROR Error: element not found: ('xpath', '//*[@id="login"]/div[2]/label/input')
+2024-01-21 19:48:41 DEBUG Click to element: ('css selector', 'button')
+2024-01-21 19:48:41 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "css selector", "value": "button"}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"F85EE00C5E94EAAC586DE1D4F04D47F6_element_75"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:41 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/F85EE00C5E94EAAC586DE1D4F04D47F6_element_75/click {}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/F85EE00C5E94EAAC586DE1D4F04D47F6_element_75/click HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:41 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/nav/ul/li[3]/a')
+2024-01-21 19:48:41 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/nav/ul/li[3]/a"}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_83"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:41 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_83/text {}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_83/text HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":"Hello, testtest1"} | headers=HTTPHeaderDict({'Content-Length': '28', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:41 DEBUG Click to element: ('xpath', '//*[@id="app"]/main/nav/ul/li[2]/a')
+2024-01-21 19:48:41 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/nav/ul/li[2]/a"}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_84"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:41 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_84/click {}
+2024-01-21 19:48:41 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_84/click HTTP/1.1" 200 0
+2024-01-21 19:48:41 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:41 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG Get text from element: ('xpath', '//*[@id="app"]/main/div/div/h1')
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"app\"]/main/div/div/h1"}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_90"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_90/text {}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_90/text HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":"Contact us!"} | headers=HTTPHeaderDict({'Content-Length': '23', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG Send text to element: ('xpath', '//*[@id="contact"]/div[1]/label/input')
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"contact\"]/div[1]/label/input"}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_87"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_87/clear {}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_87/clear HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_87/value {"text": "test_name", "value": ["t", "e", "s", "t", "_", "n", "a", "m", "e"]}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_87/value HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG Send text to element: ('xpath', '//*[@id="contact"]/div[2]/label/input')
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"contact\"]/div[2]/label/input"}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_88"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_88/clear {}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_88/clear HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_88/value {"text": "test@gmail.con", "value": ["t", "e", "s", "t", "@", "g", "m", "a", "i", "l", ".", "c", "o", "n"]}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_88/value HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG Send text to element: ('xpath', '//*[@id="contact"]/div[3]/label/span/textarea')
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"contact\"]/div[3]/label/span/textarea"}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_89"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_89/clear {}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_89/clear HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_89/value {"text": "test_content", "value": ["t", "e", "s", "t", "_", "c", "o", "n", "t", "e", "n", "t"]}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_89/value HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG Click to element: ('xpath', '//*[@id="contact"]/div[4]/button')
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element {"using": "xpath", "value": "//*[@id=\"contact\"]/div[4]/button"}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"26631C4E6BF9674A3FC9D683E6292D4E_element_98"}} | headers=HTTPHeaderDict({'Content-Length': '95', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:44 DEBUG POST http://localhost:63591/session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_98/click {}
+2024-01-21 19:48:44 DEBUG http://localhost:63591 "POST /session/427bbf6241740edc0967362db8999121/element/26631C4E6BF9674A3FC9D683E6292D4E_element_98/click HTTP/1.1" 200 0
+2024-01-21 19:48:44 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:44 DEBUG Finished Request
+2024-01-21 19:48:47 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/alert/text {}
+2024-01-21 19:48:47 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/alert/text HTTP/1.1" 200 0
+2024-01-21 19:48:47 DEBUG Remote response: status=200 | data={"value":"Form successfully submitted"} | headers=HTTPHeaderDict({'Content-Length': '39', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:47 DEBUG Finished Request
+2024-01-21 19:48:47 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/alert/text {}
+2024-01-21 19:48:47 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/alert/text HTTP/1.1" 200 0
+2024-01-21 19:48:47 DEBUG Remote response: status=200 | data={"value":"Form successfully submitted"} | headers=HTTPHeaderDict({'Content-Length': '39', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:47 DEBUG Finished Request
+2024-01-21 19:48:47 DEBUG GET http://localhost:63591/session/427bbf6241740edc0967362db8999121/alert/text {}
+2024-01-21 19:48:47 DEBUG http://localhost:63591 "GET /session/427bbf6241740edc0967362db8999121/alert/text HTTP/1.1" 200 0
+2024-01-21 19:48:47 DEBUG Remote response: status=200 | data={"value":"Form successfully submitted"} | headers=HTTPHeaderDict({'Content-Length': '39', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:47 DEBUG Finished Request
+2024-01-21 19:48:47 DEBUG DELETE http://localhost:63591/session/427bbf6241740edc0967362db8999121 {}
+2024-01-21 19:48:47 DEBUG http://localhost:63591 "DELETE /session/427bbf6241740edc0967362db8999121 HTTP/1.1" 200 0
+2024-01-21 19:48:47 DEBUG Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-01-21 19:48:47 DEBUG Finished Request

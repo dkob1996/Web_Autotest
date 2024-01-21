@@ -1,5 +1,6 @@
 import yaml
 from UI_functions.test_page import OperationsHelper
+from paths.static_paths import *
 
 # Test commands:
 ## Run pytest with sending results to email
@@ -8,7 +9,7 @@ from UI_functions.test_page import OperationsHelper
 ## pytest test_1.py -vv
 
 # Import test data
-with open("./yaml_files_UI_tests/testdata.yaml") as f:
+with open(yaml_ui_testdata()) as f:
     testdata = yaml.safe_load(f)
 ## Auth data
 name = testdata["username"]

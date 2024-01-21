@@ -1,0 +1,25 @@
+
+
+# Step names
+step_1_name: 'Step 1: Check item in collection.'
+step_2_name: 'Step 2: Post item and Check its description.'
+step_auth: 'AUTH'
+step_post_item: 'POST ITEM'
+
+# Logging text
+## Info
+step_started: ' - STARTED'
+step_ended: ' - ENDED'
+expected_result: 'Expected result: '
+token_text: 'Token:'
+
+## Errors
+failed: 'Fail'
+exception_in: 'EXCEPTION in '
+error_in: 'Error in'
+
+## Response
+post_data: 'POST DATA: '
+post_data_title: '\nTitle: '
+post_data_description: ', \nDescription: '
+post_data_contact: ', \nContent: '
