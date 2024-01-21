@@ -21,3 +21,8 @@ def yaml_ui_testdata():
 def yaml_ui_logging_text():
     return './yaml_files_UI_tests/logging_text.yaml'
 
+# Mailer data
+## Mail data
+def yaml_mailer_data():
+    return './Mailer/mail_data.yaml'
+

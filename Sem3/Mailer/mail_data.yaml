@@ -1,0 +1,12 @@
+# Gmail data
+## Email title
+gmail_subject: 'Test subject'                                    
+## Email body
+gmail_body: 'Test body of message'                
+
+## Email sender
+gmail_sender: ''                                  
+## Email massive of recipients
+gmail_recipients: '["dkob1996@gmail.com", "dimakob35@gmail.com"]'  
+## Password of sender
+gmail_password: ''                                          
