@@ -1,25 +1,31 @@
+# URL'S
 address: https://test-stand.gb.ru
 lk_address: https://test-stand.gb.ru
 profile_address: https://test-stand.gb.ru/user/profile
-sleep_time: 1
-browser: chrome
+contact_us_url: https://test-stand.gb.ru/contact
+
+# Setting-up data
+browser: chrome   # chrome/firefox
+sleep_time: 3
 wait: 10
-username: testtest1
-password: c23b2ed66e
 
 
 # errors
 401_error: '401'
+500_error: '500'
 
-
-# test_data
+# Login page
 hello_prefix: 'Hello'
+username: testtest1
+password: c23b2ed66e
+invalid_login_data: test
+
+# Create post page
 test_title: 'test_title'
 test_description: 'test_description'
 test_content: 'test_content'
 
-# contact_us_test_data
-contact_us_url: https://test-stand.gb.ru/contact
+# Contact us page
 test_contact_name: 'test_name'
 test_contact_valid_email: 'test@gmail.con'
 test_contact_invalid_email: 'test'

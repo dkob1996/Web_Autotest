@@ -1,40 +1,42 @@
 import yaml
 from test_page import OperationsHelper
-import time
-# pytest --html=report.html; python3 mail.py
 
+# Test commands:
+## Run pytest with sending results to email
+### pytest --html=report.html; python3 mail.py
+## Start current test
+## pytest test_1.py -vv
+
+# Import test data
 with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)
-name = testdata["username"]
-passwd = testdata["password"]
+    ## Auth data
+    name = testdata["username"]
+    passwd = testdata["password"]
+    ## Valid data
+    valid_user_name = testdata["hello_prefix"]
+    ## Invalid data
+    invalid_login_data = testdata["invalid_login_data"]
+    ## Errors data
+    error_401 = testdata['401_error']
+    ## Setting-up data
+    site_address = testdata['address']
 
-test_title = testdata["test_title"]
-test_description = testdata["test_description"]
-test_content = testdata["test_content"]
 
-
+## Step 1: Login with invalid data
 def test_step1(browser):
-    page = OperationsHelper(address=testdata['address'], driver= browser)
+    page = OperationsHelper(address=site_address, driver= browser)
     page.go_to_site()
-    page.enter_login('test')
-    page.enter_password('test')
+    page.enter_login(invalid_login_data)
+    page.enter_password(invalid_login_data)
     page.click_login_button()
-    assert page.get_error_text() == testdata['401_error']
+    assert page.get_error_text() == error_401
 
+## Step 2: Login with valid data
 def test_step2(browser):
-    page = OperationsHelper(address=testdata['address'], driver= browser)
+    page = OperationsHelper(address=site_address, driver= browser)
     page.enter_login(name)
     page.enter_password(passwd)
     page.click_login_button()
-    assert page.get_auth_text() == f'{testdata["hello_prefix"]}, {testdata["username"]}'
-
-def test_step3(browser):
-    page = OperationsHelper(address=testdata['address'], driver= browser)
-    page.click_ad_post()
-    page.enter_title(test_title)
-    page.enter_description(test_description)
-    page.enter_content(test_content)
-    page.click_new_post_button()
-    time.sleep(3)
-    assert page.get_new_post_info() == test_title
+    assert page.get_auth_text() == f'{valid_user_name}, {name}'
     

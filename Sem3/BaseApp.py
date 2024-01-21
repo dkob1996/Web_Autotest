@@ -1,26 +1,29 @@
 import yaml
-with open("./testdata.yaml") as f:
-    testdata = yaml.safe_load(f)
-    browser = testdata["browser"]
-    wait = testdata["wait"]
+import logging
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import logging
+
+# Import setting-up data
+with open("./testdata.yaml") as f:
+    testdata = yaml.safe_load(f)
+    wait = testdata["wait"]
 
 class BasePage:
     def __init__(self, address, driver):
         self.address = address
         self.driver = driver
     
+    # Func of finding elements by locator
     def find_element(self, locator):
         try:
-            element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(locator),
+            element = WebDriverWait(self.driver, wait).until(EC.presence_of_element_located(locator),
                                                 message=f"Can't find element by locator {locator}")
         except:
             logging.exception('Error: element not found')
             element = None
         return element
 
+    # Func to get element property from element which we found
     def get_element_property(self, mode, path, property):
         element = self.find_element(mode, path)
         if element is None:
@@ -28,6 +31,7 @@ class BasePage:
         else:
             return (element.value_of_css_property(property))
     
+    # Func which open browser in curtain address
     def go_to_site(self):
         try:
             self.driver.get(self.address)
@@ -36,14 +40,18 @@ class BasePage:
             return False
         return True
 
+    # Func which get current url from open page
     def get_current_url(self):
         return (self.driver.current_url)
     
+    # Func which switch from main browser window to alert window
     def swith_to_alert(self):
         return (self.driver.switch_to.alert)
     
+    # Func which get text from alert field
     def get_text_from_alert(self):
         return (self.swith_to_alert().text)
     
+    # Func which press "accept" in alert window
     def accept_the_alert(self):
         self.swith_to_alert().accept

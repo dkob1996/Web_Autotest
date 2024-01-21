@@ -1,10 +1,10 @@
-from BaseApp import BasePage
-from selenium.webdriver.common.by import By
 import yaml
 import logging
+from selenium.webdriver.common.by import By
+from BaseApp import BasePage
 
 class TestSearchLocator:
-    
+    # Parse locators from yaml file to dictionary
     with open("./locators.yaml") as f:
         locators = yaml.safe_load(f)
     ids = dict()
@@ -14,6 +14,7 @@ class TestSearchLocator:
         ids[locator] = (By.CSS_SELECTOR, locators['CSS_SELECTOR'][locator])
 
 class OperationsHelper(BasePage):
+    # Func which enter text into fields with curtain locator
     def enter_text(self, locator, word, description=None):
         if description:
             logging.debug(f'Send text to element {description}')
@@ -29,7 +30,7 @@ class OperationsHelper(BasePage):
             field.clear()
             field.send_keys(word)
 
-
+    # Func which get text from fields with curtain locator
     def get_text(self, locator, description=None):
         if description:
             logging.debug(f'Get text from element {description}')
@@ -46,7 +47,7 @@ class OperationsHelper(BasePage):
                 logging.error(f'Element {locator} not found')
         return text
 
-    
+    # Func which does click to button with curtain locator
     def click_button(self, locator, description=None):
         if description:
             logging.debug(f'Click to element {description}')
@@ -63,8 +64,8 @@ class OperationsHelper(BasePage):
                     logging.exception(f'Cannot click to element {locator}')       
             
 
-
-
+    # Functions which use main functions and transfer to them curtain locators
+    ## Login functions                
     def enter_login(self, word):
         self.enter_text(TestSearchLocator.ids['LOGIN_FIELD'], word)
     
@@ -81,6 +82,7 @@ class OperationsHelper(BasePage):
     def get_auth_text(self):
         return self.get_text(TestSearchLocator.ids['HELLO_USERNAME_SEPECTOR'])
 
+    ## Create Post functions
     def click_ad_post(self):
         self.click_button(TestSearchLocator.ids['NEW_POST_BUTTON'])
     
@@ -102,6 +104,7 @@ class OperationsHelper(BasePage):
     def get_new_post_title(self):
         return self.get_text(TestSearchLocator.ids['POST_TITLE_RESULT_FIELD'])
     
+    ## Contact Form functions
     def click_contact_header_button(self):
         self.click_button(TestSearchLocator.ids['CONTACT_HEADER_BUTTON'])
 

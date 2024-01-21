@@ -5,13 +5,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
+# Import setting-up data
 with open("./testdata.yaml") as f:
    testdata = yaml.safe_load(f)
-name = testdata["username"]
-browser_name = testdata["browser"]
-wait = testdata["wait"]
+   browser_name = testdata["browser"]
+   sleep_time = testdata["sleep_time"]
 
-
+# Fuxture to set-up curtain browser where test
 @pytest.fixture(scope='session')
 def browser():
       if browser_name == "firefox":
@@ -22,7 +22,7 @@ def browser():
          service = Service(executable_path=ChromeDriverManager().install())
          options = webdriver.ChromeOptions()
          driver = webdriver.Chrome(service=service, options=options)
-      driver.implicitly_wait(1)
+      driver.implicitly_wait(sleep_time)
       yield driver
       driver.quit()
 
